@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C46731EA0E23333B55F35B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271080F9BF9C4E7ECD29A95D /* libPods.a */; };
+		D22EB95D1B276FAF00DB9D4F /* MJAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D22EB95C1B276FAF00DB9D4F /* MJAlertAction.m */; };
+		D259B1451B25F3BA0034659D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B1441B25F3BA0034659D /* main.m */; };
+		D259B1481B25F3BA0034659D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B1471B25F3BA0034659D /* AppDelegate.m */; };
+		D259B14B1B25F3BA0034659D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B14A1B25F3BA0034659D /* ViewController.m */; };
+		D259B14E1B25F3BA0034659D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B14C1B25F3BA0034659D /* Main.storyboard */; };
+		D259B1501B25F3BA0034659D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D259B14F1B25F3BA0034659D /* Images.xcassets */; };
+		D259B1531B25F3BA0034659D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D259B1511B25F3BA0034659D /* LaunchScreen.xib */; };
+		D259B15F1B25F3BA0034659D /* AlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B15E1B25F3BA0034659D /* AlertControllerTests.m */; };
+		D259B1701B25F3E70034659D /* MJAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B16A1B25F3E70034659D /* MJAlertController.m */; };
+		D259B1711B25F3E70034659D /* MJAlertControllerTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B16D1B25F3E70034659D /* MJAlertControllerTransitionManager.m */; };
+		D259B1721B25F3E70034659D /* MJTitleMessageAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B16F1B25F3E70034659D /* MJTitleMessageAlertController.m */; };
+		D259B17B1B25F8910034659D /* MJAlertControllerConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D259B17A1B25F8910034659D /* MJAlertControllerConfigurator.m */; };
+		D2B91C9C1B2833D4007A4908 /* MJAlertContentTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B91C9A1B2833D4007A4908 /* MJAlertContentTestController.m */; };
+		D2B91C9D1B2833D4007A4908 /* MJAlertContentTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2B91C9B1B2833D4007A4908 /* MJAlertContentTestController.xib */; };
+		D2C591231B2736D30066C5AA /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C591221B2736D30066C5AA /* NSString+Additions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D259B1591B25F3BA0034659D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D259B1371B25F3BA0034659D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D259B13E1B25F3BA0034659D;
+			remoteInfo = AlertController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		271080F9BF9C4E7ECD29A95D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BDE95FD99B791A5F812C66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D22EB95B1B276FAF00DB9D4F /* MJAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlertAction.h; sourceTree = "<group>"; };
+		D22EB95C1B276FAF00DB9D4F /* MJAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlertAction.m; sourceTree = "<group>"; };
+		D259B13F1B25F3BA0034659D /* AlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D259B1431B25F3BA0034659D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D259B1441B25F3BA0034659D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D259B1461B25F3BA0034659D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D259B1471B25F3BA0034659D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D259B1491B25F3BA0034659D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D259B14A1B25F3BA0034659D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D259B14D1B25F3BA0034659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D259B14F1B25F3BA0034659D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D259B1521B25F3BA0034659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D259B1581B25F3BA0034659D /* AlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D259B15D1B25F3BA0034659D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D259B15E1B25F3BA0034659D /* AlertControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertControllerTests.m; sourceTree = "<group>"; };
+		D259B1691B25F3E70034659D /* MJAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlertController.h; sourceTree = "<group>"; };
+		D259B16A1B25F3E70034659D /* MJAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlertController.m; sourceTree = "<group>"; };
+		D259B16B1B25F3E70034659D /* MJAlertController_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlertController_Private.h; sourceTree = "<group>"; };
+		D259B16C1B25F3E70034659D /* MJAlertControllerTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlertControllerTransitionManager.h; sourceTree = "<group>"; };
+		D259B16D1B25F3E70034659D /* MJAlertControllerTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlertControllerTransitionManager.m; sourceTree = "<group>"; };
+		D259B16E1B25F3E70034659D /* MJTitleMessageAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTitleMessageAlertController.h; sourceTree = "<group>"; };
+		D259B16F1B25F3E70034659D /* MJTitleMessageAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTitleMessageAlertController.m; sourceTree = "<group>"; };
+		D259B1791B25F8910034659D /* MJAlertControllerConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlertControllerConfigurator.h; sourceTree = "<group>"; };
+		D259B17A1B25F8910034659D /* MJAlertControllerConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlertControllerConfigurator.m; sourceTree = "<group>"; };
+		D2B91C991B2833D4007A4908 /* MJAlertContentTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlertContentTestController.h; sourceTree = "<group>"; };
+		D2B91C9A1B2833D4007A4908 /* MJAlertContentTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlertContentTestController.m; sourceTree = "<group>"; };
+		D2B91C9B1B2833D4007A4908 /* MJAlertContentTestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJAlertContentTestController.xib; sourceTree = "<group>"; };
+		D2C591211B2736D30066C5AA /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		D2C591221B2736D30066C5AA /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		F83555A44A512682781789DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D259B13C1B25F3BA0034659D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C46731EA0E23333B55F35B9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D259B1551B25F3BA0034659D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C722E7B6856A73F12383B06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56BDE95FD99B791A5F812C66 /* Pods.debug.xcconfig */,
+				F83555A44A512682781789DE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D259B1361B25F3BA0034659D = {
+			isa = PBXGroup;
+			children = (
+				D259B1411B25F3BA0034659D /* AlertController */,
+				D259B15B1B25F3BA0034659D /* AlertControllerTests */,
+				D259B1401B25F3BA0034659D /* Products */,
+				0C722E7B6856A73F12383B06 /* Pods */,
+				D9365B17F5DAC9917BCEAD6D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D259B1401B25F3BA0034659D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D259B13F1B25F3BA0034659D /* AlertController.app */,
+				D259B1581B25F3BA0034659D /* AlertControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D259B1411B25F3BA0034659D /* AlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D259B1461B25F3BA0034659D /* AppDelegate.h */,
+				D259B1471B25F3BA0034659D /* AppDelegate.m */,
+				D259B1491B25F3BA0034659D /* ViewController.h */,
+				D259B14A1B25F3BA0034659D /* ViewController.m */,
+				D2B91C991B2833D4007A4908 /* MJAlertContentTestController.h */,
+				D2B91C9A1B2833D4007A4908 /* MJAlertContentTestController.m */,
+				D2B91C9B1B2833D4007A4908 /* MJAlertContentTestController.xib */,
+				D2C591211B2736D30066C5AA /* NSString+Additions.h */,
+				D2C591221B2736D30066C5AA /* NSString+Additions.m */,
+				D259B14C1B25F3BA0034659D /* Main.storyboard */,
+				D259B14F1B25F3BA0034659D /* Images.xcassets */,
+				D259B1511B25F3BA0034659D /* LaunchScreen.xib */,
+				D259B1681B25F3E70034659D /* MJAlertController */,
+				D259B1421B25F3BA0034659D /* Supporting Files */,
+			);
+			path = AlertController;
+			sourceTree = "<group>";
+		};
+		D259B1421B25F3BA0034659D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D259B1431B25F3BA0034659D /* Info.plist */,
+				D259B1441B25F3BA0034659D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D259B15B1B25F3BA0034659D /* AlertControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D259B15E1B25F3BA0034659D /* AlertControllerTests.m */,
+				D259B15C1B25F3BA0034659D /* Supporting Files */,
+			);
+			path = AlertControllerTests;
+			sourceTree = "<group>";
+		};
+		D259B15C1B25F3BA0034659D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D259B15D1B25F3BA0034659D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D259B1681B25F3E70034659D /* MJAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D22EB95B1B276FAF00DB9D4F /* MJAlertAction.h */,
+				D22EB95C1B276FAF00DB9D4F /* MJAlertAction.m */,
+				D259B1691B25F3E70034659D /* MJAlertController.h */,
+				D259B16A1B25F3E70034659D /* MJAlertController.m */,
+				D259B16B1B25F3E70034659D /* MJAlertController_Private.h */,
+				D259B16C1B25F3E70034659D /* MJAlertControllerTransitionManager.h */,
+				D259B16D1B25F3E70034659D /* MJAlertControllerTransitionManager.m */,
+				D259B16E1B25F3E70034659D /* MJTitleMessageAlertController.h */,
+				D259B16F1B25F3E70034659D /* MJTitleMessageAlertController.m */,
+				D259B1791B25F8910034659D /* MJAlertControllerConfigurator.h */,
+				D259B17A1B25F8910034659D /* MJAlertControllerConfigurator.m */,
+			);
+			name = MJAlertController;
+			path = ../../MJAlertController;
+			sourceTree = "<group>";
+		};
+		D9365B17F5DAC9917BCEAD6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				271080F9BF9C4E7ECD29A95D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D259B13E1B25F3BA0034659D /* AlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D259B1621B25F3BA0034659D /* Build configuration list for PBXNativeTarget "AlertController" */;
+			buildPhases = (
+				5DB6D8A2FD363AA153469A90 /* Check Pods Manifest.lock */,
+				D259B13B1B25F3BA0034659D /* Sources */,
+				D259B13C1B25F3BA0034659D /* Frameworks */,
+				D259B13D1B25F3BA0034659D /* Resources */,
+				6D70A79A3DBD8F166F372ECF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlertController;
+			productName = AlertController;
+			productReference = D259B13F1B25F3BA0034659D /* AlertController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D259B1571B25F3BA0034659D /* AlertControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D259B1651B25F3BA0034659D /* Build configuration list for PBXNativeTarget "AlertControllerTests" */;
+			buildPhases = (
+				D259B1541B25F3BA0034659D /* Sources */,
+				D259B1551B25F3BA0034659D /* Frameworks */,
+				D259B1561B25F3BA0034659D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D259B15A1B25F3BA0034659D /* PBXTargetDependency */,
+			);
+			name = AlertControllerTests;
+			productName = AlertControllerTests;
+			productReference = D259B1581B25F3BA0034659D /* AlertControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D259B1371B25F3BA0034659D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mobile Jazz";
+				TargetAttributes = {
+					D259B13E1B25F3BA0034659D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					D259B1571B25F3BA0034659D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = D259B13E1B25F3BA0034659D;
+					};
+				};
+			};
+			buildConfigurationList = D259B13A1B25F3BA0034659D /* Build configuration list for PBXProject "AlertController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D259B1361B25F3BA0034659D;
+			productRefGroup = D259B1401B25F3BA0034659D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D259B13E1B25F3BA0034659D /* AlertController */,
+				D259B1571B25F3BA0034659D /* AlertControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D259B13D1B25F3BA0034659D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B91C9D1B2833D4007A4908 /* MJAlertContentTestController.xib in Resources */,
+				D259B14E1B25F3BA0034659D /* Main.storyboard in Resources */,
+				D259B1531B25F3BA0034659D /* LaunchScreen.xib in Resources */,
+				D259B1501B25F3BA0034659D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D259B1561B25F3BA0034659D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DB6D8A2FD363AA153469A90 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D70A79A3DBD8F166F372ECF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D259B13B1B25F3BA0034659D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D259B14B1B25F3BA0034659D /* ViewController.m in Sources */,
+				D2C591231B2736D30066C5AA /* NSString+Additions.m in Sources */,
+				D2B91C9C1B2833D4007A4908 /* MJAlertContentTestController.m in Sources */,
+				D259B1721B25F3E70034659D /* MJTitleMessageAlertController.m in Sources */,
+				D259B17B1B25F8910034659D /* MJAlertControllerConfigurator.m in Sources */,
+				D259B1481B25F3BA0034659D /* AppDelegate.m in Sources */,
+				D259B1711B25F3E70034659D /* MJAlertControllerTransitionManager.m in Sources */,
+				D259B1701B25F3E70034659D /* MJAlertController.m in Sources */,
+				D259B1451B25F3BA0034659D /* main.m in Sources */,
+				D22EB95D1B276FAF00DB9D4F /* MJAlertAction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D259B1541B25F3BA0034659D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D259B15F1B25F3BA0034659D /* AlertControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D259B15A1B25F3BA0034659D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D259B13E1B25F3BA0034659D /* AlertController */;
+			targetProxy = D259B1591B25F3BA0034659D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D259B14C1B25F3BA0034659D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D259B14D1B25F3BA0034659D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D259B1511B25F3BA0034659D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D259B1521B25F3BA0034659D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D259B1601B25F3BA0034659D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D259B1611B25F3BA0034659D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D259B1631B25F3BA0034659D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56BDE95FD99B791A5F812C66 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlertController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D259B1641B25F3BA0034659D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F83555A44A512682781789DE /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlertController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D259B1661B25F3BA0034659D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlertController.app/AlertController";
+			};
+			name = Debug;
+		};
+		D259B1671B25F3BA0034659D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlertController.app/AlertController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D259B13A1B25F3BA0034659D /* Build configuration list for PBXProject "AlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D259B1601B25F3BA0034659D /* Debug */,
+				D259B1611B25F3BA0034659D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D259B1621B25F3BA0034659D /* Build configuration list for PBXNativeTarget "AlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D259B1631B25F3BA0034659D /* Debug */,
+				D259B1641B25F3BA0034659D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D259B1651B25F3BA0034659D /* Build configuration list for PBXNativeTarget "AlertControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D259B1661B25F3BA0034659D /* Debug */,
+				D259B1671B25F3BA0034659D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D259B1371B25F3BA0034659D /* Project object */;
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Lyt (0.6)
+  - UIColor+Additions (2.0.2)
+  - UIImage+Additions (2.0.1)
+
+DEPENDENCIES:
+  - Lyt (~> 0.6)
+  - UIColor+Additions (~> 2.0.0)
+  - UIImage+Additions (~> 2.0.1)
+
+SPEC CHECKSUMS:
+  Lyt: 782ddb228608b0193a2793edaeb3acbb0afa52b1
+  UIColor+Additions: 8b14f4851a4da23ef60be123454f4f30fafdb5c2
+  UIImage+Additions: e4e15b8dae4aea5fa9016964c1af6344431fd1e3
+
+COCOAPODS: 0.37.1
