@@ -29,6 +29,10 @@ typedef NS_ENUM(NSUInteger, MJAlertControllerStyle)
  **/
 @interface MJAlertController : UIViewController
 
+/** ********************************************************************* **
+ * @name Initializers
+ ** ********************************************************************* **/
+
 /**
  * Default static initializer to display title and message.
  * @param title The title.
@@ -77,11 +81,32 @@ typedef NS_ENUM(NSUInteger, MJAlertControllerStyle)
  **/
 - (id)initWithViewController:(UIViewController*)viewController preferredStyle:(MJAlertControllerStyle)style;
 
+/** ********************************************************************* **
+ * @name Alert Configuration
+ ** ********************************************************************* **/
+
 /**
  * Adds a new action.
  * @param alertAction The action to add.
  **/
 - (void)addAction:(MJAlertAction*)alertAction;
+
+/**
+ * @property The added actions
+ **/
+@property (nonatomic, readonly) NSArray *actions;
+
+/**
+ * Adds a new text field.
+ * @param configurationHandler Text field configuration block.
+ * @discussion This method only works if the alert controller has been created with a title and message and not with a custom view controller.
+ **/
+- (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField))configurationHandler;
+
+/**
+ * @property The added textfields.
+ **/
+@property (nonatomic, strong, readonly) NSArray *textFields;
 
 /**
  * Configuration method.

@@ -28,6 +28,7 @@
     
     UIViewController *_containedViewController;
     NSMutableArray *_actions;
+    NSMutableArray *_textFields;
     NSArray *_buttons;
     
     UILabel *_sheetTitleLabel;
@@ -112,11 +113,16 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+#pragma mark Properties
+
+- (NSArray*)actions
 {
-    [super viewDidAppear:animated];
-    
-    _viewDidAppearFlag = YES;
+    return [_actions copy];
+}
+
+- (NSArray*)textFields
+{
+    return [_textFields copy];
 }
 
 #pragma mark View Life Cycle
@@ -143,6 +149,13 @@
     {
         [self mjz_setupWithSheetStyle];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    _viewDidAppearFlag = YES;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -201,6 +214,11 @@
     }
     
     [_actions addObject:alertAction];
+}
+
+- (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField))configurationHandler
+{
+    // TODO
 }
 
 - (void)configureAlert:(void (^)(MJAlertControllerConfigurator *configurator))configurationBlock
@@ -324,30 +342,30 @@
     // ---------------------------------------------------------------------------
     // Creating the container view
     //
-    _alertContainerView = [[UIView alloc] initWithFrame:CGRectZero];
-    _alertContainerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_alertContainerView];
+    _contentView = [[UIView alloc] initWithFrame:CGRectZero];
+    _contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:_contentView];
 
-    [_alertContainerView lyt_centerXInParent];
-    _alertCenterYLayoutConstraint = [_alertContainerView lyt_centerYInParent];
+    [_contentView lyt_centerXInParent];
+    _alertCenterYLayoutConstraint = [_contentView lyt_centerYInParent];
     
-    _alertContainerView.clipsToBounds = YES;
-    _alertContainerView.layer.cornerRadius = _configuration.cornerRadius;
+    _contentView.clipsToBounds = YES;
+    _contentView.layer.cornerRadius = _configuration.cornerRadius;
     
     CGSize contentSize = [self mjz_sizeForAlertContent];
     if (_actions.count == 0)
-        [_alertContainerView lyt_setSize:contentSize];
+        [_contentView lyt_setSize:contentSize];
     else if (_actions.count <= 2)
-        [_alertContainerView lyt_setSize:CGSizeMake(contentSize.width, contentSize.height+[_configuration buttonHeightForStyle:_preferredStyle])];
+        [_contentView lyt_setSize:CGSizeMake(contentSize.width, contentSize.height+[_configuration buttonHeightForStyle:_preferredStyle])];
     else
-        [_alertContainerView lyt_setSize:CGSizeMake(contentSize.width, contentSize.height+_actions.count*[_configuration buttonHeightForStyle:_preferredStyle])];
+        [_contentView lyt_setSize:CGSizeMake(contentSize.width, contentSize.height+_actions.count*[_configuration buttonHeightForStyle:_preferredStyle])];
     
     // ---------------------------------------------------------------------------
     // Inserting the viewController
     //
     UIView *viewControllerView = _containedViewController.view;
     viewControllerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_alertContainerView addSubview:viewControllerView];
+    [_contentView addSubview:viewControllerView];
     [viewControllerView lyt_alignTopToParent];
     [viewControllerView lyt_alignSidesToParent];
     [viewControllerView lyt_setHeight:contentSize.height];
@@ -368,20 +386,20 @@
         button.backgroundColor = [UIColor clearColor];
         
         button.translatesAutoresizingMaskIntoConstraints = NO;
-        [_alertContainerView addSubview:button];
+        [_contentView addSubview:button];
         
         if (counter <= 2)
         {
             [button lyt_alignBottomToParent];
             [button lyt_setHeight:[_configuration buttonHeightForStyle:_preferredStyle]];
-            [button lyt_matchWidthToView:_alertContainerView multiplier:1.0/counter];
+            [button lyt_matchWidthToView:_contentView multiplier:1.0/counter];
             
             if (previousButton)
             {
                 [button lyt_placeLeftOfView:previousButton];
                 
                 UIView *separatorLine = [self mjz_createSeparatorView];
-                [_alertContainerView addSubview:separatorLine];
+                [_contentView addSubview:separatorLine];
                 
                 [separatorLine lyt_placeRightOfView:button];
                 [separatorLine lyt_setWidth:SEPARATOR_WIDTH];
@@ -402,7 +420,7 @@
                 [button lyt_placeAboveView:previousButton];
                 
                 UIView *separatorLine = [self mjz_createSeparatorView];
-                [_alertContainerView addSubview:separatorLine];
+                [_contentView addSubview:separatorLine];
                 [separatorLine lyt_alignSidesToParent];
                 [separatorLine lyt_setHeight:SEPARATOR_WIDTH];
                 [separatorLine lyt_alignBottomToView:button];
@@ -462,7 +480,7 @@
     if (_actions.count > 0)
     {
         UIView *separatorLine = [self mjz_createSeparatorView];
-        [_alertContainerView addSubview:separatorLine];
+        [_contentView addSubview:separatorLine];
         [separatorLine lyt_alignSidesToParent];
         [separatorLine lyt_setHeight:SEPARATOR_WIDTH];
         [separatorLine lyt_alignBottomToView:viewControllerView];
@@ -479,11 +497,11 @@
     // ---------------------------------------------------------------------------
     // Creating the container view
     //
-    _alertContainerView = [[UIView alloc] initWithFrame:CGRectZero];
-    _alertContainerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_alertContainerView];
-    _alertContainerView.clipsToBounds = YES;
-    _alertContainerView.layer.cornerRadius = _configuration.cornerRadius;
+    _contentView = [[UIView alloc] initWithFrame:CGRectZero];
+    _contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:_contentView];
+    _contentView.clipsToBounds = YES;
+    _contentView.layer.cornerRadius = _configuration.cornerRadius;
     
     CGSize contentSize = [self mjz_sizeForSheetContent];
     CGSize sheetSize = contentSize;
@@ -501,9 +519,9 @@
     }
     
     // Setting the sheet size
-    _sheetBottomLayoutConstraint = [_alertContainerView lyt_alignBottomToParentWithMargin:_configuration.padding];
-    [_alertContainerView lyt_centerXInParent];
-    [_alertContainerView lyt_setSize:sheetSize];
+    _sheetBottomLayoutConstraint = [_contentView lyt_alignBottomToParentWithMargin:_configuration.padding];
+    [_contentView lyt_centerXInParent];
+    [_contentView lyt_setSize:sheetSize];
     
     
     // ---------------------------------------------------------------------------
@@ -511,7 +529,7 @@
     //
     UIView *viewControllerView = _containedViewController.view;
     viewControllerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_alertContainerView addSubview:viewControllerView];
+    [_contentView addSubview:viewControllerView];
     [viewControllerView lyt_alignTopToParent];
     [viewControllerView lyt_alignSidesToParent];
     [viewControllerView lyt_setHeight:contentSize.height];
@@ -530,7 +548,7 @@
         button.backgroundColor = [UIColor clearColor];
         
         button.translatesAutoresizingMaskIntoConstraints = NO;
-        [_alertContainerView addSubview:button];
+        [_contentView addSubview:button];
         [button lyt_alignSidesToParent];
         [button lyt_setHeight:[_configuration buttonHeightForStyle:_preferredStyle]];
         
@@ -595,7 +613,7 @@
         if (addSeparator)
         {
             UIView *separatorLine = [self mjz_createSeparatorView];
-            [_alertContainerView addSubview:separatorLine];
+            [_contentView addSubview:separatorLine];
             [separatorLine lyt_alignSidesToParent];
             [separatorLine lyt_setHeight:SEPARATOR_WIDTH];
             [separatorLine lyt_alignBottomToView:button];
@@ -627,7 +645,7 @@
         contentSize.height > 0)
     {
         UIView *separatorLine = [self mjz_createSeparatorView];
-        [_alertContainerView addSubview:separatorLine];
+        [_contentView addSubview:separatorLine];
         [separatorLine lyt_alignSidesToParent];
         [separatorLine lyt_setHeight:SEPARATOR_WIDTH];
         [separatorLine lyt_alignBottomToView:viewControllerView];

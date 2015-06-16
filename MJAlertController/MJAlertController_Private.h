@@ -10,8 +10,19 @@
 
 @interface MJAlertController ()
 
+/**
+ * The preferred style.
+ **/
 @property (nonatomic, assign) MJAlertControllerStyle preferredStyle;
+
+/**
+ * The background view.
+ **/
 @property (nonatomic, strong) UIView *backgroundView;
-@property (nonatomic, strong) UIView *alertContainerView;
+
+/**
+ * The alert content view.
+ **/
+@property (nonatomic, strong) UIView *contentView;
 
 @end

@@ -112,14 +112,14 @@
     
     alertController.view.alpha = initialAlpha;
     alertController.backgroundView.alpha = initialBackgroundViewAlpha;
-    alertController.alertContainerView.transform = initialTransform;
+    alertController.contentView.transform = initialTransform;
     
     [UIView animateWithDuration:duration
                           delay:0
                         options:animationOptions
                      animations:^{
                          alertController.view.alpha = finalAlpha;
-                         alertController.alertContainerView.transform = finalTransform;
+                         alertController.contentView.transform = finalTransform;
                          alertController.backgroundView.alpha = finalBackgroundViewAlpha;
                      } completion:^(BOOL finished) {
                          completionBlock();
@@ -141,7 +141,7 @@
     [alertController.view setNeedsLayout];
     [alertController.view layoutIfNeeded];
     
-    CGFloat sheetHeight = alertController.alertContainerView.frame.size.height;
+    CGFloat sheetHeight = alertController.contentView.frame.size.height;
     
     if (_transitionTo == MJAlertControllerTransitionToInitial)
     {
@@ -165,14 +165,14 @@
     }
     
     alertController.backgroundView.alpha = initialBackgroundViewAlpha;
-    alertController.alertContainerView.transform = initialTransform;
+    alertController.contentView.transform = initialTransform;
     
     [UIView animateWithDuration:duration
                           delay:0
                         options:animationOptions
                      animations:^{
                          alertController.backgroundView.alpha = finalBackgroundViewAlpha;
-                         alertController.alertContainerView.transform = finalTransform;
+                         alertController.contentView.transform = finalTransform;
                      } completion:^(BOOL finished) {
                          completionBlock();
                      }];
